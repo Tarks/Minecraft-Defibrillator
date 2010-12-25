@@ -1,0 +1,44 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="MinecraftDefibrillator.MainWindow"
+        Title="Minecraft Defibrillator" Height="350" Width="350" Icon="/MinecraftDefibrillator;component/Resources/Defib.ico">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.624,1.392" StartPoint="0.453,0.847">
+            <GradientStop Color="#FF5F9F35" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.096*" />
+            <RowDefinition Height="0.154*" />
+            <RowDefinition Height="0.058*" />
+            <RowDefinition Height="0.298*" />
+            <RowDefinition Height="0.157*" />
+            <RowDefinition Height="0.077*" />
+            <RowDefinition Height="0.16*"/>
+        </Grid.RowDefinitions>
+        <Image Margin="-2.468,0,0,0" Source="Resources/McIcon.png" Stretch="Fill" Grid.RowSpan="7" Opacity="0.695"/>
+        <TextBlock Text="If Minecraft Blackscreens/crashes you can press" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="5,0,5,5" Height="23.036" VerticalAlignment="Bottom" />
+        <Border HorizontalAlignment="Center" Margin="5" Grid.Row="1" CornerRadius="10" Background="#9EFFFFFF" >
+            <TextBlock Text="Ctrl + Shift + R" FontSize="20" Foreground="Red" TextWrapping="Wrap" Padding="5" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <TextBlock Text="To quickly close and re-open it" HorizontalAlignment="Center" TextWrapping="Wrap" Grid.Row="2" VerticalAlignment="Center" />
+        <Button  Margin="5" Click="LaunchMinecraftClick" Grid.Row="3" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.556*"/>
+                    <RowDefinition Height="0.444*"/>
+                </Grid.RowDefinitions>
+                <Image Source="Resources/McIcon.png" />
+                <TextBlock Text="Play Minecraft" Grid.Row="1" HorizontalAlignment="Center" />
+            </Grid>
+        </Button>
+        <Button x:Name="BtnChangeLauncherLocation" Click="SelectMinecraftClicked" Content="Select Minecraft Launcher" Margin="5" Grid.Row="4" />
+        <CheckBox x:Name="cmbStartOnLaunch" Content="Start Minecraft when I launch this program" Grid.Row="5" Checked="cmbStartChecked" Unchecked="cmbStartUnChecked" HorizontalAlignment="Center" />
+        <CheckBox x:Name="cmbAutoLogin" Grid.Row="6" Checked="cmbAutoLoginChecked" Unchecked="cmbAutoLoginUnChecked" HorizontalAlignment="Center" >
+            <TextBlock Text="Auto log me in (you must have asked minecraft to remember your password)" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </CheckBox>
+    </Grid>
+</Window>
