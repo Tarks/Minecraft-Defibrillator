@@ -4,6 +4,8 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
+//Found this at http://www.codeproject.com/KB/cs/CSLLKeyboardHook.aspx written by StormySpike
+
 namespace Utilities
 {
     /// <summary>
